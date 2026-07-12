@@ -1,0 +1,163 @@
+@use '../../../assets/theme/_var.scss' as *;
+
+.buyback_modal {
+  .modal_body {
+    .row {
+      margin: -1rem !important;
+      > div {
+        padding: 1rem !important;
+      }
+    }
+  }
+  .input_group,
+  .custom_select {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .input_with_max {
+    position: relative;
+
+    .max_btn {
+      position: absolute;
+      right: 1.6rem;
+      top: 4rem;
+      background: transparent;
+      border: none;
+      color: #2f80ed;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+  }
+
+  .buyback_price_method_row {
+    .form-label {
+      display: block;
+      margin-bottom: 0.8rem;
+    }
+    .buyback_price_calculated_text {
+      font-size: 1.2rem;
+      color: rgba($lightBlack, 0.7);
+      margin-top: 0.4rem;
+    }
+    .buyback_price_method_input {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+      border: 0.1rem solid #dee2e6;
+      border-radius: 0.4rem;
+      overflow: hidden;
+      .buyback_price_display {
+        flex: 1;
+        padding: 1rem 1.2rem;
+        font-size: 1.4rem;
+        color: $blacktext;
+        background: #f8f9fa;
+        display: flex;
+        align-items: center;
+      }
+      .custom_select {
+        margin: 0;
+        padding: 0;
+        border: none;
+        min-width: 10rem;
+        .form-label {
+          display: none;
+        }
+        .select__control {
+          border: none !important;
+          border-radius: 0 !important;
+          box-shadow: none !important;
+          min-height: 4.2rem;
+        }
+      }
+    }
+  }
+
+  .amount_you_get_row {
+    .form-label {
+      display: block;
+      margin-bottom: 0.8rem;
+    }
+    .amount_you_get_display {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 1.2rem;
+      border: 0.1rem solid #dee2e6;
+      border-radius: 0.4rem;
+      background: #f8f9fa;
+      font-size: 1.4rem;
+      color: $blacktext;
+      min-height: 4.8rem;
+      .amount_value {
+        flex: 1;
+      }
+      .amount_currency {
+        flex-shrink: 0;
+        margin-left: auto;
+        color: rgba($lightBlack, 0.8);
+      }
+    }
+  }
+
+  .available_text {
+    font-size: 14px;
+    color: #7d7d7d;
+    margin-top: 4px;
+    text-align: right;
+  }
+
+  .fee_text {
+    font-size: 14px;
+    color: #7d7d7d;
+    margin-top: 4px;
+    text-align: right;
+  }
+
+  .profit_loss_inline {
+    font-size: 1.4rem;
+    margin-top: 0.4rem;
+    font-weight: 600;
+
+    &.profit {
+      color: #16a34a;
+    }
+
+    &.loss {
+      color: #dc2626;
+    }
+  }
+
+  .calculated_with_fees_text {
+    font-size: 1.2rem;
+    color: rgba($lightBlack, 0.7);
+    margin-top: 0.4rem;
+  }
+
+  .confirm_box {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 14px;
+    color: #333;
+
+    input {
+      margin-top: 4px;
+    }
+  }
+
+  .error_text {
+    color: #e53935;
+    font-size: 13px;
+    margin-top: 4px;
+  }
+
+  .modal_footer {
+    padding-top: 4rem;
+    .submit_btn {
+      width: 100%;
+    }
+  }
+}

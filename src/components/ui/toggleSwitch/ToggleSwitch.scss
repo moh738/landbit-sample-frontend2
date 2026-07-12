@@ -1,0 +1,59 @@
+@use '../../../assets/theme/_var.scss' as *;
+
+.tggl_switch {
+  display: inline-block;
+  line-height: 0;
+
+  &_label {
+    display: inline-block;
+    width: 3.2rem;
+    height: 1.8rem;
+    margin: 0 !important;
+    position: relative;
+  }
+
+  &_slider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 3rem;
+    cursor: pointer;
+    border: 0;
+    overflow: hidden;
+    transition: 0.2s;
+    background: $textclr;
+    display: flex;
+    align-items: center;
+
+    &:before {
+      position: absolute;
+      content: '';
+      width: 1.4rem;
+      height: 1.4rem;
+      background: rgba($white, 0.7);
+      border: 0.1rem solid rgba($lightblue, 0.6);
+      border-radius: 50%;
+      transform: translate(0.2rem, -50%);
+      transition: 0.2s;
+      top: 50%;
+    }
+  }
+
+  input {
+    display: none;
+
+    &:checked + .tggl_switch_slider {
+      background: $btnGradient;
+
+      &:before {
+        transform: translate(1.6rem, -50%);
+      }
+    }
+
+    // &:checked+.tggl_switch_slider {
+    //     // background-color: $primaryclr;
+    // }
+  }
+}

@@ -1,0 +1,136 @@
+@use '../../../assets/theme/_var.scss' as *;
+
+.incomplete_alert {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem 0;
+  justify-content: space-between;
+  padding: 1.7rem 1.6rem;
+  background-color: $white;
+  border-radius: 6rem;
+  margin-bottom: 3rem;
+
+  @media (max-width: 991px) {
+    padding: 1.2rem 1rem;
+    border-radius: 1.5rem;
+  }
+
+  &.incomplete_alert_red {
+    background-color: rgba($red, 0.1);
+  }
+
+  &.incomplete_alert_blue {
+    background-color: rgba($blueclr, 0.1);
+
+    .incomplete_alert_text {
+      svg {
+        g {
+          path {
+            fill: $blueclr;
+          }
+        }
+      }
+      p {
+        color: $blueclr;
+      }
+    }
+  }
+
+  &.incomplete_alert_orange {
+    background-color: rgba($orangeClr, 0.1);
+
+    .incomplete_alert_text {
+      svg {
+        g {
+          path {
+            fill: $orangeClr;
+          }
+        }
+      }
+      p {
+        color: $orangeClr;
+      }
+    }
+  }
+
+  &.incomplete_alert_dark_red {
+    background-color: rgba($darkRed, 0.1);
+
+    .incomplete_alert_text {
+      svg {
+        g {
+          path {
+            fill: $darkRed;
+          }
+        }
+      }
+      p {
+        color: $darkRed;
+      }
+    }
+  }
+
+  &_text {
+    display: flex;
+    align-items: center;
+
+    svg {
+      // position: absolute;
+      // left: 1.6rem;
+      // transform: translateY(-50%);
+      // top: 50%;
+      height: 3.6rem;
+      width: 3.6rem;
+      flex-shrink: 0;
+      margin-right: 1rem;
+
+      @media (max-width: 767px) {
+        height: 2.8rem;
+        width: 2.8rem;
+      }
+    }
+
+    p {
+      margin: 0;
+      color: $red;
+      font-size: 1.6rem;
+      font-weight: 400;
+      word-break: break-word;
+      padding-right: 1rem;
+
+      @media (max-width: 1679px) {
+        font-size: 1.4rem;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  a,
+  button {
+    font-size: 1.4rem;
+    background: $red;
+    font-weight: 600;
+    border-radius: 3rem;
+    height: 4.2rem;
+    color: $white;
+    border: 1px solid transparent;
+    padding: 1rem 2rem;
+    @extend %transition;
+
+    @media (max-width: 767px) {
+      font-size: 1.2rem;
+      padding: 0.8rem 1.6rem;
+      height: 3.5rem;
+    }
+
+    &:hover {
+      color: $red;
+      border: 1px solid $red;
+      background: transparent;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@use '../../../assets/theme/_var.scss' as *;
+
+.canvas_modal {
+  background-color: rgba(9, 13, 20, 0.6);
+  backdrop-filter: blur(15px);
+
+  .modal-body {
+    .signatureCanvas {
+      border: 2px dashed #bbb; // clear visual boundary
+      border-radius: 8px;
+      display: block;
+      margin: 1rem 0 3rem;
+      background-color: #fff;
+      cursor: crosshair;
+    }
+
+    .canvasmodal_buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 1rem;
+
+      .inner_buttons {
+        display: flex;
+        gap: 1rem;
+      }
+    }
+
+    .signature-inline {
+      display: flex;
+      align-items: center;
+      gap: 10px; // space between text and signature
+      margin: 0; // optional, depends on your layout
+    }
+
+    .signature-thumb {
+      width: 350px; // small space (adjust)
+      height: 104px; // small height (adjust)
+      border-radius: 6px;
+      background: #fff;
+      overflow: hidden;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .signature-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; // keeps signature proportion
+      display: block;
+    }
+  }
+}

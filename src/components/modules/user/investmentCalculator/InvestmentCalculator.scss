@@ -1,0 +1,123 @@
+@use '../../../../assets/theme/_var.scss' as *;
+
+.investmentcalculator {
+  &_procard,
+  &_piecard {
+    background: $cardBg;
+    backdrop-filter: blur(108.73126983642578px);
+    border: 1px solid rgba($borderclr3, 0.06);
+    border-radius: 4rem;
+    padding: 3rem;
+    height: 100%;
+    @extend %boxShadow;
+  }
+
+  .row {
+    &:not([class*='g-']):not([class*='gx-']):not([class*='gy']) {
+      margin: 0 -1rem;
+
+      // @media (max-width: 1199px) {
+      //   margin: 0 -0.5rem;
+      // }
+
+      > div {
+        padding: 0 1rem;
+
+        // @media (max-width: 1199px) {
+        //   padding: 0 0.5rem;
+        // }
+      }
+    }
+  }
+
+  &_piecard {
+    h3 {
+      font-size: 2rem;
+      font-weight: 400;
+      color: $blackDarkClr;
+      margin-bottom: 4rem;
+
+      @media (max-width: 1679px) {
+        font-size: 1.8rem;
+        margin-bottom: 3rem;
+      }
+
+      @media (max-width: 1199px) {
+        font-size: 1.6rem;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 1.4rem;
+      }
+
+      span {
+        font-weight: 600;
+      }
+    }
+
+    .piechart {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem 5.6rem;
+
+      @media (max-width: 575px) {
+        flex-direction: column;
+      }
+
+      &_list {
+        ul {
+          li {
+            display: flex;
+            align-items: center;
+
+            &:not(:last-child) {
+              margin-bottom: 1.6rem;
+            }
+
+            .icon {
+              height: 1.7rem;
+              width: 1.7rem;
+              border-radius: 0.4rem;
+              background-color: $lightblued9e4f4;
+              display: flex;
+              margin-right: 0.8rem;
+              flex-shrink: 0;
+
+              &.blue {
+                background-color: $blueclr;
+              }
+
+              &.green {
+                background-color: $lightgreenClr;
+              }
+
+              &.lightblue {
+                background-color: $lightblued9e4f4;
+              }
+            }
+
+            p {
+              font-size: 1.6rem;
+              font-weight: 400;
+              color: $black20272B;
+
+              @media (max-width: 1679px) {
+                font-size: 1.4rem;
+              }
+
+              // @media (max-width: 767px) {
+              //   font-size: 1.2rem;
+              // }
+
+              span {
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

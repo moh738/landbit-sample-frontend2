@@ -1,0 +1,316 @@
+@use '../../../assets/theme/_var.scss' as *;
+
+.header {
+  & {
+    margin-top: 0;
+    padding: 1.6rem 2.5rem 1.6rem 34.5rem;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    backdrop-filter: blur(0.5rem);
+    z-index: 998;
+    background-color: $white;
+    border-bottom: 1px solid $borderclr2;
+
+    @media (max-width: 1679px) {
+      padding: 1rem 2rem 1rem 32rem;
+    }
+  }
+
+  h4 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: $blacktext;
+  }
+
+  &_left {
+    img {
+      min-width: 12.5rem;
+    }
+
+    @media (min-width: 1280px) {
+      a {
+        display: none;
+      }
+    }
+
+    @media (max-width: 1279px) {
+      h4 {
+        display: none;
+      }
+    }
+  }
+
+  &_right {
+    width: 100%;
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+
+    .connect {
+      background: $gradientWhite;
+      padding: 0.5rem 2.4rem 0.5rem 0.5rem;
+      border-radius: 4rem;
+
+      @media (max-width: 575px) {
+        padding: 0.5rem 1rem 0.5rem 0.5rem;
+      }
+
+      .walletbtn {
+        position: relative;
+        // padding-left: 4.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        // @media (max-width: 575px) {
+        //   padding-left: 3.2rem;
+        // }
+
+        .user {
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          h1 {
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 100%;
+            padding: 0;
+            margin: 0;
+            height: max-content;
+          }
+        }
+
+        img {
+          position: absolute;
+          transform: translateY(-50%);
+          top: 50%;
+          height: 3.8rem;
+          width: 3.8rem;
+          border-radius: 50%;
+          object-fit: cover;
+          left: 0;
+
+          @media (max-width: 575px) {
+            height: 2.5rem;
+            width: 2.5rem;
+          }
+        }
+
+        .text {
+          text-align: left;
+          margin-left: 0.5rem;
+
+          strong {
+            display: block;
+            font-size: 1.6rem;
+            font-weight: 600;
+            line-height: normal;
+            max-width: 20ch;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            @media (max-width: 575px) {
+              font-size: 1.1rem;
+              max-width: 12ch;
+            }
+          }
+
+          span {
+            display: flex;
+            align-items: center;
+            color: $textclr;
+            font-size: 1.4rem;
+            font-weight: 500;
+            text-align: left;
+            line-height: normal;
+
+            &.header_email {
+              word-break: break-word;
+              overflow-wrap: anywhere;
+              white-space: normal;
+            }
+
+            @media (max-width: 575px) {
+              font-size: 1.1rem;
+            }
+
+            button {
+              display: flex;
+              align-items: center;
+              margin-left: 0.5rem;
+
+              svg {
+                height: 1.8rem;
+                width: 1.8rem;
+                flex-shrink: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .dropdown {
+      .dropdown-toggle {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        border: none;
+        opacity: 1;
+        padding: 0;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      &-menu {
+        width: 100%;
+        background-color: $white;
+        border: 0;
+        box-shadow: 0px 0px 12px 0px #0000001a;
+        border-radius: 0.8rem;
+        z-index: 11;
+        backdrop-filter: blur(1rem);
+        padding: 1.5rem;
+        margin-top: 1rem;
+        overflow-y: auto;
+
+        @media (max-width: 575px) {
+          padding: 1rem;
+        }
+
+        a {
+          font-size: 1.4rem;
+          font-weight: 500;
+          color: $blackDarkClr;
+          background: transparent;
+          outline: none;
+          padding: 1rem 0;
+
+          @media (max-width: 575px) {
+            font-size: 1.2rem;
+            padding: 0.8rem 0;
+          }
+
+          &:hover,
+          &.active,
+          &:focus {
+            background: $btnGradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+
+          &:first-child {
+            padding-top: 0;
+          }
+
+          &:last-child {
+            padding-bottom: 0;
+          }
+        }
+      }
+
+      &-item {
+        border-bottom: 1px solid $borderclr2;
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  .header_hammer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    cursor: pointer;
+    width: 3rem;
+    padding: 0;
+    height: 3rem;
+    transition: all 0.2s ease-in-out;
+    margin-left: 2rem;
+
+    &:focus {
+      border: none;
+      box-shadow: none;
+    }
+
+    @media (min-width: 1279px) {
+      display: none;
+    }
+
+    @media (max-width: 1199px) {
+      margin-left: 1rem;
+    }
+
+    @media (max-width: 1199px) {
+      margin-left: 0.5rem;
+    }
+
+    span {
+      display: block;
+      height: 4px;
+      width: 100%;
+      background: $btnGradientHover;
+      border-radius: 4px;
+      transition: all 0.2s ease-in-out;
+      transform-origin: center;
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+
+      // &:nth-child(2) {
+      //   width: 2.4rem;
+      // }
+    }
+
+    &.active {
+      span {
+        background: $btnGradientHover;
+
+        &:first-child {
+          transform: rotate(45deg) translate(7px, 7px);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+          transform: translateX(-20px);
+        }
+
+        &:last-child {
+          transform: rotate(-45deg) translate(6px, -6px);
+        }
+      }
+    }
+  }
+
+  &_overlay {
+    @media (min-width: 1280px) {
+      display: none;
+    }
+
+    @media (max-width: 1279px) {
+      backdrop-filter: blur(0.2rem);
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      z-index: 998;
+    }
+  }
+
+  @media (max-width: 1279px) {
+    padding: 1rem 1.5rem;
+  }
+}

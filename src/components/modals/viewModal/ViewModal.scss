@@ -1,0 +1,23 @@
+@use '../../../assets/theme/_var.scss' as *;
+
+.viewmodal {
+  &.modal {
+    .modal {
+      &-body {
+        .view_in {
+          @media (max-width: 991px) {
+            margin-top: 2.5rem;
+          }
+
+          img {
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+            max-height: 80vh;
+            border-radius: 2.8rem;
+          }
+        }
+      }
+    }
+  }
+}

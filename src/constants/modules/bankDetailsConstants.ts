@@ -1,0 +1,18 @@
+export const allowedUpiProviders = [
+  'ybl',
+  'ibl',
+  'axl', 
+  'okaxis',
+  'okhdfcbank',
+  'okicici', 
+  'paytm',
+  'ptsbi',
+  'pthdfc',
+  'ptaxis', 
+  'upi', 
+  'apl', 
+  'sbi', 
+  'hdfcbank', 
+  'icici', 
+  'axisbank', 
+];

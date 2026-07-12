@@ -1,0 +1,85 @@
+@use '../../../assets/theme/_var.scss' as *;
+
+.congratulationsModal {
+  &.modal {
+    .modal {
+      &-dialog {
+        max-width: 52.2rem;
+        text-align: center;
+
+        .modal-body {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .iconbg {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 8.4rem;
+            width: 8.4rem;
+            background-color: rgba($lightgreenClr, 0.1);
+            border-radius: 50%;
+            margin-bottom: 2rem;
+
+            @media (max-width: 1679px) {
+              height: 6.5rem;
+              width: 6.5rem;
+              margin-bottom: 1rem;
+            }
+
+            @media (max-width: 575px) {
+              height: 5.5rem;
+              width: 5.5rem;
+              margin-bottom: 1rem;
+            }
+
+            svg {
+              height: 4.4rem;
+              width: 4.4rem;
+              flex-shrink: 0;
+
+              @media (max-width: 1679px) {
+                height: 3.5rem;
+                width: 3.5rem;
+              }
+
+              @media (max-width: 575px) {
+                height: 3rem;
+                width: 3rem;
+              }
+            }
+          }
+
+          h4 {
+            color: $blackDarkClr;
+            margin-bottom: 1rem;
+
+            @media (max-width: 575px) {
+              margin-bottom: 0.5rem;
+            }
+          }
+
+          p {
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: $greyClr;
+            margin-bottom: 4rem;
+
+            @media (max-width: 1679px) {
+              margin-bottom: 2.5rem;
+            }
+
+            @media (max-width: 991px) {
+              font-size: 1.4rem;
+            }
+
+            @media (max-width: 575px) {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

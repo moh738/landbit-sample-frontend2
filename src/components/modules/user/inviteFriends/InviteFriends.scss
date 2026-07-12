@@ -1,0 +1,249 @@
+@use '../../../../assets/theme/_var.scss' as *;
+
+.invitefriends {
+  .row {
+    &:not([class*='g-']):not([class*='gx-']):not([class*='gy']) {
+      margin: 0 -1rem;
+
+      > div {
+        padding: 0 1rem;
+      }
+    }
+  }
+
+  .friends_data {
+    display: flex;
+    align-items: center;
+    background: $cardBg;
+    backdrop-filter: blur(108.73126983642578px);
+    border: 1px solid rgba($borderclr3, 0.06);
+    border-radius: 2.4rem;
+    padding: 1.1rem 3rem;
+    @extend %boxShadow;
+    margin-bottom: 3rem;
+
+    @media (max-width: 767px) {
+      border-radius: 1.5rem;
+      padding: 2rem 1.5rem;
+    }
+
+    @media (max-width: 575px) {
+      flex-direction: column;
+      text-align: center;
+      border-radius: 1.5rem;
+      padding: 2rem 1.5rem;
+    }
+
+    .content {
+      width: 100%;
+      max-width: 85.9rem;
+      margin-right: auto;
+
+      h5 {
+        font-size: 2rem;
+        font-weight: 500;
+        color: rgba($lightBlack, 0.7);
+        margin-bottom: 1rem;
+
+        @media (max-width: 1679px) {
+          font-size: 1.8rem;
+        }
+
+        @media (max-width: 991px) {
+          font-size: 1.6rem;
+          margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 767px) {
+          font-size: 1.4rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      h2 {
+        font-size: 5rem;
+        font-weight: 700;
+        color: $blackDarkClr;
+        margin-bottom: 0.8rem;
+
+        @media (max-width: 1679px) {
+          font-size: 3.8rem;
+        }
+
+        @media (max-width: 991px) {
+          font-size: 3rem;
+          margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 767px) {
+          font-size: 2.8rem;
+          margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 575px) {
+          font-size: 2.4rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      p {
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: rgba($lightBlack, 0.7);
+
+        @media (max-width: 1679px) {
+          font-size: 1.4rem;
+        }
+
+        @media (max-width: 767px) {
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    .friend_rightImg {
+      margin-right: 7.8rem;
+
+      @media (max-width: 1199px) {
+        margin-right: 0;
+      }
+
+      @media (max-width: 575px) {
+        margin-top: 3rem;
+      }
+    }
+  }
+
+  .share_data {
+    padding: 2.8rem 3rem;
+    height: 100%;
+    background: $cardBg;
+    backdrop-filter: blur(108.73126983642578px);
+    border: 1px solid rgba($borderclr3, 0.06);
+    border-radius: 2.4rem;
+    @extend %boxShadow;
+
+    @media (max-width: 1679px) {
+      padding: 2rem;
+    }
+
+    @media (max-width: 1199px) {
+      padding: 1.5rem;
+    }
+
+    @media (max-width: 767px) {
+      border-radius: 1.8rem;
+    }
+
+    @media (max-width: 575px) {
+      text-align: center;
+    }
+
+    h5 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: $blackDarkClr;
+
+      @media (max-width: 1679px) {
+        font-size: 1.8rem;
+      }
+
+      @media (max-width: 991px) {
+        font-size: 1.6rem;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 1.4rem;
+      }
+    }
+
+    .btn_icon {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.2rem;
+
+      @media (max-width: 991px) {
+        margin-top: 0.8rem;
+      }
+
+      @media (max-width: 575px) {
+        justify-content: center;
+      }
+
+    
+      button {
+        display: inline-flex;
+        align-items: center;
+        text-align: center;
+        border-radius: 3.8rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        border: 0;
+        text-transform: capitalize;
+        transition: all ease-in-out 0.3s;
+        color: $blackDarkClr;
+        min-height: 4.4rem;
+        border: 1px solid $borderclr;
+        padding: 0.5rem;
+        background-color: $white;
+        justify-content: flex-start;
+        min-width: 13.5rem;
+        cursor: pointer;
+        text-decoration: none;
+
+        @media (max-width: 991px) {
+          font-size: 1.2rem;
+          min-height: 3.8rem;
+        }
+
+        span {
+          margin-right: 0.8rem;
+          display: inline-flex;
+
+          svg {
+            width: 3.2rem;
+            height: 3.2rem;
+            flex-shrink: 0;
+
+            @media (max-width: 991px) {
+              width: 2.6rem;
+              height: 2.6rem;
+            }
+          }
+        }
+      }
+
+      .fb_btn {
+        &:hover {
+          box-shadow: 0px 0px 23px 0px rgb(27 163 193 / 25%);
+        }
+      }
+
+      .twitter_btn {
+        &:hover {
+          box-shadow: 0px 0px 23px 0px rgb(27 163 193 / 25%);
+        }
+      }
+
+      .whatsapp_btn {
+        &:hover {
+          box-shadow: 0px 0px 23px 0px rgb(27 163 193 / 25%);
+        }
+      }
+    }
+  }
+
+  .referral_cards {
+    margin: 3rem 0;
+  }
+
+  .common_tabs {
+    &.referral_tabs {
+      .nav-item {
+        max-width: 22rem;
+      }
+    }
+  }
+}

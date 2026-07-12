@@ -1,0 +1,224 @@
+@use '../../../assets/theme/_var.scss' as *;
+
+.sidebar {
+  & {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    max-width: 32.5rem;
+    position: fixed;
+    left: 0;
+    background-color: $black;
+    top: 0;
+    padding: 2.3rem 2rem 5rem;
+    z-index: 1010;
+    background-color: $white;
+    box-shadow: 0.2rem 0 0.6rem 0 rgba($black, 0.04);
+    @extend %transition;
+
+    @media (max-width: 1679px) {
+      max-width: 30rem;
+      padding: 2rem 2.6rem 3rem;
+    }
+
+    @media (max-width: 575px) {
+      max-width: 27rem;
+      padding: 2rem;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &_in {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 6.7rem);
+
+    @media (max-width: 1679px) {
+      height: calc(100% - 5.7rem);
+    }
+
+    @media (max-width: 575px) {
+      height: calc(100% - 4.7rem);
+    }
+  }
+
+  &_logo {
+    display: block;
+    text-align: center;
+    margin-bottom: 2rem;
+
+    @media (max-width: 1679px) {
+      margin-bottom: 1rem;
+    }
+
+    img {
+      position: relative;
+      width: 15.7rem;
+      height: 5rem;
+
+      @media (max-width: 575px) {
+        width: 14rem;
+        height: 4rem;
+      }
+    }
+  }
+
+  &_menu {
+    height: calc(100% - 8rem);
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    @media (max-width: 575px) {
+      height: calc(100% - 7rem);
+    }
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: 0.8rem;
+
+        @media (max-width: 575px) {
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      a {
+        position: relative;
+        font-weight: 600;
+        color: $lightBlack;
+        display: block;
+        font-size: 1.6rem;
+        padding: 2rem 2.4rem;
+        border-radius: 2rem;
+
+        @media (max-width: 1679px) {
+          font-size: 1.4rem;
+          padding: 1.4rem 1.8rem;
+          border-radius: 1.4rem;
+        }
+
+        @media (max-width: 575px) {
+          font-size: 1.2rem;
+          padding: 1rem 1.4rem;
+          border-radius: 1rem;
+        }
+
+        svg {
+          margin-right: 1.8rem;
+
+          @media (max-width: 1679px) {
+            margin-right: 1rem;
+          }
+
+          @media (max-width: 575px) {
+            width: 2rem;
+            height: 2rem;
+          }
+
+          path {
+            // fill: $borderclr;
+            transition: 0.3s fill ease-in-out;
+          }
+        }
+
+        &.active {
+          position: relative;
+          color: $white;
+          background: $gradientClr;
+
+          svg {
+            opacity: 1;
+
+            * {
+              opacity: 1;
+            }
+
+            path,
+            circle {
+              fill: $white;
+            }
+          }
+        }
+      }
+
+      &:first-child {
+        a.active {
+          svg {
+            path:nth-of-type(1) {
+              fill: $white;
+              stroke: $white;
+              opacity: 0.4;
+            }
+
+            path:not(:nth-of-type(1)),
+            circle {
+              fill: $white;
+            }
+          }
+        }
+      }
+
+      .sidebar_hover {
+        &.active {
+          svg {
+            path {
+              stroke: none;
+              fill: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &_logout {
+    margin-top: auto;
+
+    a {
+      border: 0.1rem solid $red;
+      background-color: rgba($red, 0.1);
+      @extend %boxShadow;
+      padding: 2rem 2.4rem;
+      border-radius: 2rem;
+      font-weight: 600;
+      display: block;
+      font-size: 1.6rem;
+      width: 100%;
+      color: $red;
+
+      @media (max-width: 1679px) {
+        font-size: 1.4rem;
+        padding: 1.4rem 1.8rem;
+        border-radius: 1.4rem;
+      }
+
+      @media (max-width: 575px) {
+        font-size: 1.2rem;
+        padding: 1rem 1.4rem;
+        border-radius: 1rem;
+      }
+
+      svg {
+        margin-right: 2rem;
+      }
+    }
+  }
+
+  @media (max-width: 1279px) {
+    transform: translate(-100%);
+    // z-index: 999;
+
+    &.active {
+      transform: none;
+    }
+  }
+}
+
+// .disable_nav {
+//     opacity: 0.5;
+//     pointer-events: none;
+// }

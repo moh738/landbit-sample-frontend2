@@ -1,0 +1,211 @@
+@use '../../../assets/theme/_var.scss' as *;
+
+.usercard {
+  & {
+    background-color: rgba($lightgrey, 0.02);
+    // background-color: rgba($blueclr, 0.08);
+    border: 0.1rem solid $borderclr;
+    border-radius: 2.4rem;
+    overflow: hidden;
+    padding: 4rem 3rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 1679px) {
+      padding: 2rem 1.5rem;
+    }
+  }
+
+  .row {
+    &:not([class*='g-']):not([class*='gx-']):not([class*='gy']) {
+      margin: 0 -1rem;
+
+      @media (max-width: 1440px) {
+        margin: 0 -0.5rem;
+      }
+
+      > div {
+        padding: 0 1rem;
+
+        @media (max-width: 1440px) {
+          padding: 0 0.5rem;
+        }
+      }
+    }
+  }
+
+  &_progress {
+    margin-bottom: 4rem;
+
+    .progress {
+      background-color: $white;
+      border-radius: 1.2rem;
+      height: 2.4rem;
+      margin-bottom: 1rem;
+
+      @media (max-width: 911px) {
+        height: 1.5rem;
+      }
+
+      &-bar {
+        border-radius: 1.2rem;
+        backdrop-filter: blur(12px);
+        background: linear-gradient(90deg, #31d290 1.86%, #0069ff 101%);
+      }
+    }
+
+    &_value {
+      &_inner {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        justify-content: space-between;
+
+        &:not(:last-child) {
+          margin-bottom: 0.8rem;
+        }
+
+        span {
+          font-size: 1.4rem;
+          font-weight: 500;
+          color: rgba($lightBlack, 0.7);
+
+          @media (max-width: 1440px) {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  &_tokenname {
+    p {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: rgba($lightBlack, 0.7);
+      margin-bottom: 1rem;
+      word-break: break-word;
+
+      @media (max-width: 1440px) {
+        font-size: 1.2rem;
+      }
+
+      span {
+        display: block;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: $blackDarkClr;
+        word-break: break-word;
+
+        @media (max-width: 1440px) {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+
+  &_price {
+    border-top: 0.1rem solid $borderclr4;
+    border-bottom: 0.1rem solid $borderclr4;
+    padding: 1rem 0 0.5rem;
+    color: $blackDarkClr;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 700;
+    margin: 0 0 4rem;
+
+    @media (max-width: 1679px) {
+      font-size: 2.6rem;
+    }
+
+    @media (max-width: 1440px) {
+      font-size: 2.2rem;
+    }
+
+    @media (max-width: 991px) {
+      margin: 0 0 2rem;
+    }
+
+    @media (max-width: 575px) {
+      font-size: 2rem;
+    }
+
+    span {
+      color: rgba($lightgrey, 0.7);
+      font-size: 1.4rem;
+      font-weight: 500;
+      display: block;
+      font-weight: normal;
+      margin-bottom: 0.4rem;
+
+      @media (max-width: 1440px) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &_details {
+    padding-bottom: 4rem;
+
+    @media (max-width: 1440px) {
+      padding-bottom: 2rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: rgba($lightBlack, 0.7);
+      margin-bottom: 1rem;
+      word-break: break-word;
+
+      @media (max-width: 1440px) {
+        font-size: 1.2rem;
+      }
+
+      span {
+        display: block;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: $blackDarkClr;
+        word-break: break-word;
+
+        @media (max-width: 1440px) {
+          font-size: 1.4rem;
+        }
+
+        &.green {
+          color: $greenclr;
+        }
+
+        &.red {
+          color: $red;
+        }
+      }
+    }
+
+    // &_right {
+    //   p {
+    //     text-align: right;
+    //   }
+    // }
+  }
+
+  &_group {
+    margin-top: auto;
+    // margin-top: 4rem;
+
+    // @media (max-width: 1440px) {
+    //   margin-top: 2rem;
+    // }
+
+    .common_btn {
+      font-size: 1.6rem;
+
+      @media (max-width: 1679px) {
+        font-size: 1.4rem;
+        height: 4rem;
+      }
+    }
+  }
+}

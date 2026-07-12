@@ -1,0 +1,148 @@
+@use '../../../assets/theme/_var.scss' as *;
+
+.alertmodal {
+  &.modal {
+    .modal {
+      &-dialog {
+        max-width: 52.2rem;
+        text-align: center;
+
+        svg {
+          height: 8.4rem;
+          width: 8.4rem;
+          flex-shrink: 0;
+          border-radius: 50%;
+          margin-bottom: 2rem;
+
+          @media (max-width: 1679px) {
+            height: 6.5rem;
+            width: 6.5rem;
+            margin-bottom: 1rem;
+          }
+
+          @media (max-width: 575px) {
+            height: 5.5rem;
+            width: 5.5rem;
+            margin-bottom: 1rem;
+          }
+        }
+
+        h4 {
+          color: $blackDarkClr;
+          margin-bottom: 1rem;
+
+          @media (max-width: 575px) {
+            margin-bottom: 0.5rem;
+          }
+        }
+
+        p {
+          font-size: 1.6rem;
+          font-weight: 400;
+          color: $greyClr;
+          margin-bottom: 4rem;
+
+          @media (max-width: 1679px) {
+            margin-bottom: 2.5rem;
+          }
+
+          @media (max-width: 991px) {
+            font-size: 1.4rem;
+          }
+
+          @media (max-width: 575px) {
+            font-size: 1.2rem;
+          }
+        }
+
+        span {
+          font-size: 1.4rem;
+          font-weight: 500;
+          color: rgba($lightBlack, 0.7);
+          display: block;
+          margin-bottom: 0.8rem;
+
+          @media (max-width: 991px) {
+            font-size: 1.2rem;
+          }
+        }
+
+        h6 {
+          font-size: 1.6rem;
+          font-weight: 500;
+          color: $blackDarkClr;
+          margin-bottom: 2.4rem;
+
+          @media (max-width: 991px) {
+            font-size: 1.4rem;
+          }
+
+          @media (max-width: 575px) {
+            margin-bottom: 2rem;
+          }
+        }
+
+        .input_gruop {
+          margin: 2rem 0 4rem;
+          text-align: left;
+
+          @media (max-width: 575px) {
+            margin: 1rem 0 2.5rem;
+          }
+
+          label {
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            font-weight: 500;
+            color: rgba($lightBlack, 0.7);
+            margin-bottom: 0.8rem;
+          }
+
+          .form-control {
+            padding: 2rem;
+            font-size: 1.4rem;
+            font-weight: 400;
+            border: 0.1rem solid $borderclr;
+            border-radius: 1.6rem;
+            height: 8rem;
+            resize: none;
+
+            &:focus {
+              box-shadow: none;
+            }
+          }
+        }
+
+        .btns {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+
+          @media (max-width: 575px) {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+
+          .common_btn {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+
+  &.advisorymodal {
+    &.modal {
+      .modal {
+        &-dialog {
+          max-width: 64.8rem;
+          text-align: start;
+
+          h4 {
+            margin-bottom: 2.1rem;
+          }
+        }
+      }
+    }
+  }
+}

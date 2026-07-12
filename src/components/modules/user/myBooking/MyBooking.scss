@@ -1,0 +1,33 @@
+@use '../../../../assets/theme/_var.scss' as *;
+
+.booking {
+  &_cards {
+    .row {
+      &:not([class*='g-']):not([class*='gx-']):not([class*='gy']) {
+        margin: 0 -1.2rem;
+
+        @media (max-width: 767px) {
+          margin: 0 -0.5rem;
+        }
+
+        > div {
+          padding: 0 1.2rem;
+          margin-bottom: 2.5rem;
+
+          @media (max-width: 767px) {
+            padding: 0 0.5rem;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .common_tabs {
+    &.booking_tabs {
+      .nav-item {
+        max-width: 25rem;
+      }
+    }
+  }
+}

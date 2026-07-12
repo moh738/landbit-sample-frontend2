@@ -1,0 +1,266 @@
+@use '../../assets/theme/_var.scss' as *;
+
+.input_group {
+  & {
+    padding-bottom: 2.4rem;
+
+    @media (max-width: 767px) {
+      padding-bottom: 1.6rem;
+    }
+  }
+
+  .form {
+    &-label {
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      font-weight: 500;
+      color: rgba($lightBlack, 0.7);
+      margin-bottom: 0.8rem;
+
+      sup {
+        color: $red;
+        top: -0.4rem;
+      }
+    }
+
+    &-control {
+      background-image: none;
+      background-color: $white;
+      border: 0.1rem solid $borderclr;
+      font-size: 1.6rem;
+      width: 100%;
+      caret-color: $blackDarkClr;
+      height: 4.8rem;
+      color: $blackDarkClr;
+      border-radius: 3.8rem;
+      padding: 0.5rem 6.5rem 0.5rem 2rem;
+
+      &:-webkit-autofill::first-line,
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus,
+      &:-webkit-autofill:active {
+        -webkit-text-fill-color: $blackDarkClr;
+        overflow: clip;
+        transition: background-color 5000s ease-in-out 0s;
+        -webkit-backdrop-filter: blur(5.4rem);
+        --tw-shadow: 0 0 0px 1000px rgba($blackDarkClr, 0) inset !important;
+        -webkit-box-shadow: 0 0 0px 1000px rgba($blackDarkClr, 0) inset !important;
+        font-size: 1.6rem;
+        caret-color: $blackDarkClr;
+
+        @media (max-width: 1679px) {
+          font-size: 1.4rem;
+        }
+      }
+
+      &:focus {
+        box-shadow: none;
+      }
+
+      &::placeholder {
+        color: $textclr;
+        caret-color: $textclr;
+        opacity: 1;
+
+        @media (max-width: 1679px) {
+          font-size: 1.4rem;
+        }
+      }
+
+      &:-moz-placeholder {
+        opacity: 1;
+        color: $textclr;
+        caret-color: $textclr;
+
+        @media (max-width: 1679px) {
+          font-size: 1.4rem;
+        }
+      }
+      &::-webkit-input-placeholder {
+        opacity: 1;
+        color: $textclr;
+        caret-color: $textclr;
+
+        @media (max-width: 1679px) {
+          font-size: 1.4rem;
+        }
+      }
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      &[type='number'] {
+        -moz-appearance: textfield;
+      }
+
+      @media (max-width: 1679px) {
+        font-size: 1.4rem;
+      }
+
+      @media (max-width: 991px) {
+        height: 4.2rem;
+        padding: 0.5rem 6.5rem 0.5rem 2rem;
+      }
+
+      &.is-invalid {
+        border-color: $borderclr;
+      }
+
+      &.disabled,
+      &:disabled {
+        opacity: 0.5;
+        background-color: $greye9ecef;
+        border-color: $borderclr;
+        cursor: not-allowed;
+      }
+
+      &[readonly] {
+        cursor: not-allowed;
+        background-color: rgba($lightgrey, 0.05);
+      }
+    }
+
+    &-check {
+      &-input[type='checkbox'] {
+        cursor: pointer;
+        box-shadow: none;
+        border: 1px solid $textclr;
+        border-radius: 0.4rem;
+
+        &:checked {
+          background-color: $green1eb6c1;
+          border-color: $green1eb6c1;
+        }
+
+        &.is-invalid ~ {
+          .form-check-label {
+            color: rgba($lightBlack, 0.7);
+          }
+        }
+      }
+
+      &-label {
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: rgba($lightBlack, 0.7);
+      }
+    }
+  }
+
+  &_inner {
+    position: relative;
+
+    .rightIcon {
+      position: absolute;
+      right: 2rem;
+      border: none;
+      display: flex;
+      padding: 0;
+      background-color: transparent;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $blackDarkClr;
+      font-size: 1.6rem;
+      font-weight: 500;
+
+      @media (max-width: 1679px) {
+        font-size: 1.4rem;
+      }
+
+      @media (max-width: 575px) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .searchbar {
+    .form-control {
+      padding: 0.5rem 3rem 0.5rem 4.8rem;
+      background: rgba($lightgrey, 0.02);
+      border: 0;
+
+      @media (max-width: 991px) {
+        height: 4.2rem;
+        font-size: 1.4rem;
+      }
+    }
+
+    .searchIcon {
+      position: absolute;
+      top: 47%;
+      transform: translateY(-50%);
+      left: 1.8rem;
+
+      svg {
+        width: 1.8rem;
+
+        path {
+          fill: #5e6673;
+        }
+      }
+    }
+  }
+
+  &_passbtn {
+    position: absolute;
+    right: 2rem;
+    transform: translateY(-50%);
+    top: 50%;
+    z-index: 1;
+
+    svg {
+      height: 2rem;
+      width: 2rem;
+      flex-shrink: 0;
+
+      @media (max-width: 767px) {
+        height: 1.5rem;
+        width: 1.5rem;
+      }
+    }
+  }
+
+  &_btm_title {
+    display: block;
+    padding-top: 1rem;
+    text-align: end;
+
+    a {
+      font-size: 1.6rem;
+      font-weight: 600;
+      background: $btnGradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @media (max-width: 1679px) {
+        font-size: 1.4rem;
+      }
+
+      @media (max-width: 575px) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &.passfield {
+    .input_group {
+      &_inner {
+        .form {
+          &-control {
+            padding-right: 5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .error_text {
+    color: $red;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+}

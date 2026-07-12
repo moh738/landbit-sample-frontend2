@@ -1,0 +1,217 @@
+@use '../../../../../assets/theme/_var.scss' as *;
+
+.dashboard_statscard {
+  background: $cardBg;
+  border: 1px solid rgba($borderclr3, 0.06);
+  backdrop-filter: blur(108.73126983642578px);
+  @extend %boxShadow;
+  padding: 2.4rem 1.5rem;
+  border-radius: 2.4rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 100%;
+  gap: 1rem;
+
+  @media (max-width: 1679px) {
+    padding: 1.5rem 1rem;
+    border-radius: 1.8rem;
+  }
+
+  // @media (max-width: 1399px) {
+  //   flex-direction: column;
+  //   align-items: flex-start;
+  // }
+
+  @media (max-width: 575px) {
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  &_wrap {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 575px) {
+      flex-direction: column;
+    }
+
+    &_icon {
+      height: 5rem;
+      width: 5rem;
+      border-radius: 50%;
+      background-color: rgba($orangeClr, 0.1);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media (max-width: 1679px) {
+        height: 4rem;
+        width: 4rem;
+      }
+
+      @media (max-width: 575px) {
+        height: 3.4rem;
+        width: 3.4rem;
+      }
+
+      &.lightblueclr {
+        background-color: rgba($lightblueClr, 0.1);
+      }
+
+      &.lightorangeclr {
+        background-color: rgba($orangeClr, 0.1);
+      }
+
+      &.greenclr {
+        background-color: rgba($lightgreenClr, 0.1);
+      }
+
+      &.lightpurpleclr {
+        background-color: rgba($lightpurpleClr, 0.1);
+      }
+
+      &.lightgreenclr {
+        background-color: rgba($lightgreenClr, 0.1);
+
+        svg {
+          @media (max-width: 575px) {
+            height: 1.4rem;
+            width: 1.4rem;
+          }
+        }
+      }
+
+      svg {
+        @media (max-width: 1679px) {
+          height: 2.8rem;
+          width: 2.8rem;
+        }
+
+        @media (max-width: 575px) {
+          height: 2rem;
+          width: 2rem;
+        }
+      }
+    }
+
+    &_content {
+      padding-left: 1rem;
+
+      @media (max-width: 991px) {
+        padding-left: 1rem;
+      }
+
+      @media (max-width: 575px) {
+        padding-left: 0;
+        text-align: center;
+      }
+
+      h3 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: $blackDarkClr;
+        word-break: break-word;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-start;
+        // max-width: 22rem;
+
+        @media (max-width: 1879px) {
+          font-size: 2rem;
+        }
+
+        @media (max-width: 1679px) {
+          font-size: 1.8rem;
+        }
+
+        @media (max-width: 1440px) {
+          font-size: 1.5rem;
+        }
+
+        @media (max-width: 575px) {
+          text-align: center;
+          display: unset;
+        }
+        .info_icon_button{
+          width: 2rem;
+          height: 2rem;
+          flex-shrink: 0;
+        }
+      }
+
+      p {
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: rgba($lightBlack, 0.7);
+        margin-bottom: 0.4rem;
+
+        @media (max-width: 575px) {
+          font-size: 1.2rem;
+          margin: 0.6rem 0;
+        }
+      }
+    }
+  }
+
+  &_value {
+    display: flex;
+    align-items: center;
+    background-color: rgba($lightgreenClr, 0.1);
+    padding: 0.4rem 0.5rem;
+    border-radius: 2.4rem;
+    height: 2.4rem;
+    // max-width: 6.4rem;
+
+    &.success {
+      background-color: rgba($lightgreenClr, 0.1);
+
+      p {
+        color: $lightgreenClr;
+      }
+    }
+
+    &.danger {
+      background-color: rgba($red, 0.1);
+
+      p {
+        color: $red;
+      }
+
+      svg {
+        transform: rotate(180deg);
+
+        path {
+          fill: $red;
+        }
+      }
+    }
+
+    svg {
+      height: 0.9rem;
+      width: 0.9rem;
+      flex-shrink: 0;
+      margin-right: 0.4rem;
+    }
+
+    p {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: $lightgreenClr;
+      line-height: normal;
+      // white-space: nowrap;
+      word-break: break-word;
+      overflow: hidden;
+      // text-overflow: ellipsis;
+
+      @media (max-width: 1679px) {
+        font-size: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@use '../../../assets/theme/_var.scss' as *;
+
+.not_found {
+  align-items: center;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem 1.5rem;
+  text-align: center;
+  position: relative;
+
+  h1,
+  h2 {
+    margin-bottom: 1rem;
+    color: $blackDarkClr;
+  }
+
+  p {
+    color: rgba($lightBlack, 0.7);
+    margin-top: 1rem;
+  }
+
+  .common_btn {
+    margin-top: 5rem;
+    padding: 1rem 4rem;
+
+    @media (max-width: 991px) {
+      margin-top: 3.5rem;
+    }
+  }
+}

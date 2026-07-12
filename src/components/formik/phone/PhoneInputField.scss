@@ -1,0 +1,131 @@
+@use '../../../assets/theme/_var.scss' as *;
+
+.input_group {
+  &.phone {
+    .input_group {
+      &_inner {
+        .form {
+          &-control {
+            padding: 0.5rem 3rem 0.5rem 7rem;
+            background-image: none;
+            background-color: $white;
+            border: 0.1rem solid $borderclr;
+            font-size: 1.6rem;
+            width: 100%;
+            caret-color: $blackDarkClr;
+            height: 4.8rem;
+            color: $blackDarkClr;
+            border-radius: 3.8rem;
+
+            @media (max-width: 1679px) {
+              font-size: 1.4rem;
+            }
+
+            @media (max-width: 991px) {
+              height: 4.2rem;
+            }
+
+            &:-webkit-autofill::first-line,
+            &:-webkit-autofill,
+            &:-webkit-autofill:hover,
+            &:-webkit-autofill:focus,
+            &:-webkit-autofill:active {
+              -webkit-text-fill-color: $blacktext;
+              overflow: clip;
+              transition: background-color 5000s ease-in-out 0s;
+              -webkit-backdrop-filter: blur(5.4rem);
+              --tw-shadow: 0 0 0px 1000px rgba($blacktext, 0) inset !important;
+              -webkit-box-shadow: 0 0 0px 1000px rgba($blacktext, 0) inset !important;
+              font-size: 1.6rem;
+              caret-color: $blacktext;
+            }
+
+            &::placeholder {
+              color: $textclr;
+              caret-color: $textclr;
+              opacity: 1;
+            }
+
+            &:-moz-placeholder {
+              opacity: 1;
+              color: $textclr;
+              caret-color: $textclr;
+            }
+
+            &::-webkit-input-placeholder {
+              opacity: 1;
+              color: $textclr;
+              caret-color: $textclr;
+            }
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+
+            &[type='number'] {
+              -moz-appearance: textfield;
+            }
+
+            @media (max-width: 1679px) {
+              font-size: 1.4rem;
+            }
+
+            &.is-invalid {
+              border-color: $borderclr;
+            }
+
+            &.disabled,
+            &:disabled {
+              opacity: 0.5;
+              background-color: $greye9ecef;
+              border-color: $borderclr;
+              cursor: not-allowed;
+            }
+          }
+        }
+
+        .flag-dropdown {
+          background-color: transparent !important;
+          border: 0 !important;
+          border-top-left-radius: 1.6rem;
+          border-bottom-left-radius: 1.6rem;
+
+          > div {
+            width: 5rem;
+            padding-left: 2rem;
+            background-color: transparent !important;
+            border: 0 !important;
+
+            .flag[class*='flag 0'] {
+              background-color: $borderclr;
+            }
+          }
+
+          &::before {
+            content: '';
+            height: 3rem;
+            width: 0.1rem;
+            background-color: $borderclr;
+            position: absolute;
+            right: -0.5rem;
+            transform: translateY(-50%);
+            top: 50%;
+          }
+
+          .country-list {
+            border-radius: 0.5rem;
+
+            .country {
+              &-name {
+                font-size: 1.4rem;
+                color: $blackDarkClr;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

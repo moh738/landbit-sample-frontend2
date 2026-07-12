@@ -1,0 +1,16 @@
+@use '../../../../../../assets/theme/_var.scss' as *;
+
+.document_detail {
+  .row {
+    gap: 2.4rem 0;
+    // max-width: 64.8rem;
+
+    @media (max-width: 1679px) {
+      gap: 2rem 0;
+    }
+
+    @media (max-width: 767px) {
+      gap: 1rem 0;
+    }
+  }
+}
