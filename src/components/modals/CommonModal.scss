@@ -1,0 +1,81 @@
+@use '../../assets/theme/_var.scss' as *;
+
+.common_modal {
+  padding: 4.5rem 1.5rem;
+
+  .modal {
+    &-dialog {
+      margin: 0 auto;
+      max-width: 64.8rem;
+    }
+
+    &-content {
+      border-radius: 4rem;
+      background: $modalBg;
+      border: 0;
+      @extend %boxShadow;
+      position: relative;
+
+      @media (max-width: 991px) {
+        border-radius: 2rem;
+      }
+    }
+
+    &-header {
+      border: 0;
+      padding: 4rem 4rem 2rem 4rem;
+      .modal-title
+      {
+          font-weight: 600;
+          font-size: 2rem;
+          line-height: 3.6rem;
+      }
+
+      .btn-close {
+        position: relative;
+        top: 0;
+        opacity: 1;
+        background-image: url(../../assets/images/cross.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 0;
+        width: 2.6rem;
+        height: 2.6rem;
+        background-size: cover;
+        @extend %transition;
+
+        @media (max-width: 575px) {
+          width: 2rem;
+          height: 2rem;
+        }
+
+        &:focus {
+          box-shadow: none;
+        }
+
+        &:hover {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    &-body {
+      padding: 0 4rem 4rem 4rem;
+
+      @media (max-width: 991px) {
+        padding: 2rem;
+      }
+
+      h4 {
+        font-weight: 600;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}
+
+.modal-backdrop {
+  background-color: rgba($black090D14, 0.6);
+  backdrop-filter: blur(24px);
+  opacity: 1 !important;
+}

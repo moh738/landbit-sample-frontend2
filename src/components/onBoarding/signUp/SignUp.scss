@@ -1,0 +1,75 @@
+@use '../../../assets/theme/_var.scss' as *;
+
+.signup {
+  &_inner {
+    .signup_title {
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      font-weight: 500;
+      color: rgba($lightBlack, 0.7);
+      margin-bottom: 0.8rem;
+
+      sup {
+        color: $red;
+        top: -0.4rem;
+      }
+    }
+
+    .password {
+      display: flex;
+      align-items: flex-start;
+      gap: 0 2.4rem;
+
+      @media (max-width: 1440px) {
+        flex-direction: column;
+      }
+
+      .input_group {
+        width: 100%;
+        max-width: 19.6rem;
+
+        @media (max-width: 1440px) {
+          max-width: 100%;
+        }
+      }
+    }
+
+    .signup_tc {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: rgba($lightBlack, 0.7);
+
+      a {
+        font-weight: 700;
+        // color: rgba($lightBlack, 0.7);
+        background: $btnGradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .common_btn {
+      margin-top: 2.4rem;
+    }
+
+    &_ac {
+      padding-top: 2.4rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+      text-align: center;
+      color: $blackDark2;
+
+      @media (max-width: 575px) {
+        font-size: 1.4rem;
+        padding-top: 1.8rem;
+      }
+
+      a {
+        font-weight: 700;
+        background: $btnGradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}

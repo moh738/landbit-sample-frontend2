@@ -1,0 +1,247 @@
+@use '../../../../../assets/theme/_var.scss' as *;
+
+.completeOnboarding {
+  // max-width: 129.6rem;
+  .commonHeading {
+    width: 100%;
+  }
+
+  .row {
+    margin: 0 -1.2rem !important;
+
+    @media (max-width: 991px) {
+      margin: 0 -0.6rem !important;
+    }
+
+    > div {
+      padding: 0 1.2rem !important;
+
+      @media (max-width: 991px) {
+        padding: 0 0.6rem !important;
+      }
+    }
+  }
+
+  &_institution,
+  &_address,
+  &_doc {
+    margin-bottom: 2rem;
+
+    @media (max-width: 575px) {
+      margin-bottom: 0.5rem;
+    }
+
+    .commonHeading {
+      margin-bottom: 2.4rem;
+
+      @media (max-width: 575px) {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  &_actionbtn {
+    padding-top: 2rem;
+
+    @media (max-width: 575px) {
+      padding-top: 1rem;
+    }
+  }
+
+  .error_text {
+    color: $red;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+
+  .heading {
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: $black;
+    width: 100%;
+  }
+
+  .explore_btn {
+    width: 100%;
+    max-width: 20rem;
+    margin-bottom: 2rem;
+  }
+
+  .kyc-card {
+    background: $white;
+    border: 1px solid rgba($black, 0.08);
+    border-radius: 1.2rem;
+    padding: 2.5rem 2rem;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 2px 6px rgba($black, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // max-width: 70rem;
+
+    p {
+      font-size: 1.6rem;
+      color: $blackDarkClr;
+
+      &:not(.info) {
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.6rem 0 2rem;
+
+      li {
+        display: flex;
+        align-items: center;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: rgba($lightBlack, 0.7);
+        margin: 0.6rem 0;
+
+        img {
+          height: 1.3rem;
+          width: 1.3rem;
+          margin-right: 1rem;
+        }
+      }
+    }
+
+    .action {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .back_link {
+      display: flex;
+      align-items: center;
+      color: $blackDarkClr;
+      font-size: 1.8rem;
+      font-weight: 600;
+
+      svg {
+        margin-right: 0.5rem;
+        margin-bottom: 0.2rem;
+        flex-shrink: 0;
+      }
+    }
+
+    .kyc-steps-overview {
+      margin: 1.2rem 0 2rem;
+
+      .kyc-steps-overview-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.2rem;
+        padding: 0.8rem 0;
+        border-bottom: 1px solid rgba($black, 0.06);
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+
+      .kyc-steps-overview-index {
+        width: 2.8rem;
+        height: 2.8rem;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #18c36f, #36b37e);
+        color: $white;
+        font-size: 1.4rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-top: 0.2rem;
+      }
+
+      .kyc-steps-overview-body {
+        .kyc-steps-overview-title {
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: $blackDarkClr;
+          margin-bottom: 0.2rem;
+          @media (max-width: 767px) {
+            font-size: 1.3rem;
+          }
+        }
+
+        .kyc-steps-overview-description {
+          font-size: 1.4rem;
+          color: rgba($lightBlack, 0.8);
+        }
+      }
+    }
+
+    .kyc-steps {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      margin-bottom: 1.6rem;
+      border-bottom: 1px solid rgba($black, 0.06);
+      padding-bottom: 1.2rem;
+
+      .kyc-step-badge {
+        padding: 0.4rem 1.4rem;
+        border-radius: 999px;
+        font-size: 1.3rem;
+        font-weight: 600;
+        border: 1px solid rgba($black, 0.08);
+        background: #f5f7fb;
+        color: rgba($lightBlack, 0.8);
+
+        &.active {
+          background: linear-gradient(135deg, #18c36f, #36b37e);
+          color: $white;
+          border-color: transparent;
+        }
+
+        &.done {
+          background: #e8f7f0;
+          color: #1b8c55;
+          border-color: rgba(#1b8c55, 0.3);
+        }
+
+        &.upcoming {
+          background: #f5f7fb;
+          color: rgba($lightBlack, 0.7);
+        } 
+      }
+    }
+  }
+
+  .kyc-step-actions {
+    margin-top: 2rem;
+    > button {
+      max-width: 40rem;
+    }
+    > .row {
+      margin: -.6rem !important;
+      > div {
+        padding: .6rem !important;
+      }
+    }
+  }
+
+  .kyc-doc-type-select {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: $blackDarkClr;
+    border: 1px solid rgba($black, 0.08);
+    border-radius: 0.8rem;
+    padding: 0.8rem 1.2rem;
+    background: $white;
+    box-shadow: 0 2px 6px rgba($black, 0.05);
+    transition: all 0.3s ease;
+  }
+  &:hover {
+    background: rgba($black, 0.02);
+  }
+}

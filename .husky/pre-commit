@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# 1. Bump version
+npm run bump:version
+
+# 2. Add package.json with new version
+git add package.json
+
+# 3. Run build checks
+npm run build:dev

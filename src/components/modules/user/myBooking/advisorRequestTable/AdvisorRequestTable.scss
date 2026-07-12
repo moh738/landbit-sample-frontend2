@@ -1,0 +1,12 @@
+@use '../../../../../assets/theme/_var.scss' as *;
+
+.property_table {
+  .table_box {
+    .btn-secondry {
+      font-size: 1.2rem;
+      font-weight: 600;
+      height: 3.2rem;
+      padding: 0.5rem 2rem;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+pipeline {
+    agent any
+
+    environment {
+        ORGANIZATION = "prodlandbittacr.azurecr.io/prodlandbittacr"
+        SERVICE_NAME = "frontend-user-service"
+        REPO_URL     = "${ORGANIZATION}/${SERVICE_NAME}"
+    }
+
+    
+    stages {
+        stage('Git Clone') {
+            steps {
+                script {
+                    git credentialsId: 'gitlab-creds', url: 'https://git.antiersolutions.com/umairmd/landbitt-argocd.git', branch: 'prod'
+                }
+            }
+        }
+
+        stage('Login to Git') {
+            steps {
+                script {
+                    withCredentials([usernamePassword(credentialsId: 'gitlab-creds', passwordVariable: 'Password', usernameVariable: 'Username')]) {
+                        sh "git config user.email 'md.umair@antiersolutions.com'"
+                        sh "git config user.name 'umairmd'"
+                    }
+                }
+            }
+        }
+
+        stage('Modify Deployment File') {
+            steps {
+                script {
+                    sh """
+                    sed -i 's|${REPO_URL}:.*|${REPO_URL}:${TAG}|g' ./frontend-user-service/deployment.yaml
+                    """
+                }
+            }
+        }
+
+        stage('Git Add') {
+            steps {
+                script {
+                    sh "git add ."
+                }
+            }
+        }
+
+        stage('Git Commit') {
+            steps {
+                script {
+                    sh "git commit -m 'Done by Jenkins Job change manifest: ${TAG}'"
+                }
+            }
+        }
+
+        stage('Git Branch Check') {
+            steps {
+                script {
+                    sh "git branch"
+                }
+            }
+        }
+
+        stage('Set Git Remote') {
+            steps {
+                script {
+                    withCredentials([usernamePassword(credentialsId: 'gitlab-creds', passwordVariable: 'Password', usernameVariable: 'Username')]) {
+                        sh "git remote set-url origin https://umairmd:${Password}@git.antiersolutions.com/umairmd/landbitt-argocd.git"
+                    }
+                }
+            }
+        }
+
+        stage('Git Push') {
+            steps {
+                script {
+                    sh "git push origin prod"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+@use '../../../assets/theme/_var.scss' as *;
+.auth_card {
+  &_logo {
+    margin-bottom: 1rem;
+    display: block;
+  }
+  &_back {
+    margin-bottom: 3rem;
+    text-align: start;
+
+    a {
+      display: flex;
+      align-items: center;
+      color: $blackDarkClr;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    svg {
+      margin-right: 0.5rem;
+    }
+  }
+  &_title {
+    margin-bottom: 0.5rem;
+    color: $blackDarkClr;
+    font-weight: 600;
+  }
+  &_subtitle {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 2.4rem;
+    color: rgba($lightBlack, 0.7);
+
+    span {
+      color: $blacktext;
+    }
+  }
+}

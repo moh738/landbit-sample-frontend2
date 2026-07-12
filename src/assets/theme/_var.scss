@@ -1,0 +1,89 @@
+$textclr: #878395;
+$scrollbarclr: #8d8d8d;
+$blacktext: #0c041e;
+
+//New Colors
+
+$basefont: 'Montserrat', sans-serif;
+$white: #fff;
+$black: #000;
+$primaryclr: #f5f7fa;
+$secondryclr: linear-gradient(137.09deg, #ffffff 0.84%, #f5f7fa 95.67%);
+$borderclr: #e2e8f0;
+$borderclr2: #ebeef4;
+$borderclr3: #212429;
+$borderclr4: #e2e2ef;
+$red: #e63e32;
+$greenclr: #16a34a;
+$gradientClr: linear-gradient(92.47deg, #31d290 0.42%, #15c7c3 52.02%, #087aed 100%);
+$onboardingBg:
+  linear-gradient(0deg, #022e35, #022e35),
+  linear-gradient(180deg, rgba(2, 46, 53, 0.4) 0%, rgba(49, 210, 144, 0.4) 77%);
+$btnGradient: linear-gradient(121.9deg, #31d290 -48.48%, #0069ff 156.1%);
+$btnGradientHover: linear-gradient(121.9deg, #0069ff -48.48%, #31d290 156.1%);
+$gradientWhite: linear-gradient(135deg, #ffffff 0%, #fafbfc 51.82%, #f5f7fa 100%);
+$cardBg: linear-gradient(
+  135deg,
+  rgb(243 241 241 / 76%) 0%,
+  rgb(233 234 235 / 60%) 51.82%,
+  rgb(227 228 228 / 40%) 100%
+);
+$gradientWhiteBG: linear-gradient(
+  135deg,
+  rgb(238 238 238 / 20%) 0%,
+  rgb(231 231 231 / 60%) 51.82%,
+  rgb(228 228 228 / 40%) 100%
+);
+$barGradient: linear-gradient(90deg, #31d290 1.86%, #0069ff 101%);
+
+$purpleGradient: linear-gradient(
+  154.35deg,
+  #4d5eaa 39.11%,
+  rgba(77, 94, 170, 0) 83.78%
+);
+$cardBgGradient: linear-gradient(
+  135deg,
+  rgba(255, 255, 255, 0.8) 0%,
+  rgba(250, 251, 252, 0.6) 51.82%,
+  rgba(245, 247, 250, 0.4) 100%
+);
+$modalBg: linear-gradient(135deg, #ffffff 0%, #fafbfc 51.82%, #f5f7fa 100%);
+$redGradient: linear-gradient(180deg, #e63e32 0%, #80231c 113.54%);
+$blackDarkClr: #1d2630;
+$blackDark2: #1a202c;
+$lightBlack: #212529;
+$orangeClr: #ff8d23;
+$lightblueClr: #5daaee;
+$lightpurpleClr: #5d2de1;
+$lightgreenClr: #00ba66;
+$purpleClr: #4d5eaa;
+$skyblueClr: #69d0f9;
+$lightgrey: #141029;
+$blueclr: #0069ff;
+$lightblue: #ebeff5;
+$lightblue2: #f5f7fa;
+$yellowDark: #ff8d23;
+$greyClr: #6e6e6e;
+$black090D14: #090d14;
+$greye9ecef: #e9ecef;
+$darkGrey: #39465f;
+$grey797979: #797979;
+$green1eb6c1: #1eb6c1;
+$greyB2AAC3: #b2aac3;
+$menuBg: #eeeff3;
+$greyF6F6F6: #f6f6f6;
+$darkRed: #ba281c;
+$greyCCCCCC: #cccccc;
+$black20272B: #20272b;
+$lightblued9e4f4: #d9e4f4;
+
+%transition {
+  transition: 0.3s all ease-in-out;
+}
+
+%boxShadow {
+  box-shadow:
+    8px 8px 24px 0px #090d140f,
+    -4px -4px 8px 0px #ffffff66,
+    0px 1px 1px 0px #090d140f;
+}

@@ -1,0 +1,66 @@
+@use '../../../../../assets/theme/_var.scss' as *;
+
+.top_holdings {
+  background: $cardBg;
+  border: 1px solid rgba($borderclr3, 0.06);
+  backdrop-filter: blur(108.73126983642578px);
+  @extend %boxShadow;
+  padding: 2.4rem;
+  border-radius: 4rem;
+  height: 100%;
+
+  @media (max-width: 1679px) {
+    padding: 2rem 1.5rem;
+    border-radius: 2.4rem;
+  }
+
+  &_head {
+    margin-bottom: 4.2rem;
+
+    h4 {
+      font-weight: 600;
+      color: $blackDarkClr;
+      margin-bottom: 0.5rem;
+
+      @media (max-width: 1679px) {
+        font-size: 1.6rem;
+      }
+
+      @media (max-width: 991px) {
+        font-size: 1.4rem;
+      }
+
+      @media (max-width: 575px) {
+        font-size: 1.2rem;
+      }
+    }
+
+    h3 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: $blackDarkClr;
+
+      @media (max-width: 1679px) {
+        font-size: 2.6rem;
+      }
+
+      @media (max-width: 1440px) {
+        font-size: 2rem;
+      }
+
+      @media (max-width: 575px) {
+        font-size: 1.6rem;
+      }
+
+      span {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: rgba($lightBlack, 0.7);
+
+        @media (max-width: 575px) {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}

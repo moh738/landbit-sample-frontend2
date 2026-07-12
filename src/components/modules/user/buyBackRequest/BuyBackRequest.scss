@@ -1,0 +1,56 @@
+@use '../../../../assets/theme/_var.scss' as *;
+
+.buybackrequest {
+  &_head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    @media (max-width: 575px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .commonHeading {
+      margin: 0;
+      h4{
+
+        @media (max-width: 575px) {
+          font-size: 1.6rem;
+        }
+         @media (max-width: 480px) {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+  &_cards {
+    .row {
+      &:not([class*='g-']):not([class*='gx-']):not([class*='gy']) {
+        margin: 0 -1.2rem;
+
+        @media (max-width: 767px) {
+          margin: 0 -0.5rem;
+        }
+
+        > div {
+          padding: 0 1.2rem;
+          margin-bottom: 2.5rem;
+
+          @media (max-width: 767px) {
+            padding: 0 0.5rem;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .common_tabs {
+    &.buybackrequest_tabs {
+      .nav-item {
+        max-width: 22rem;
+      }
+    }
+  }
+}

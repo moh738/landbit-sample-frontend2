@@ -1,0 +1,79 @@
+@use '../../../../assets/theme/_var.scss' as *;
+
+.mainlayout {
+  position: relative;
+  padding: 2.5rem 2.5rem 5rem 34.5rem;
+
+  @media (max-width: 1679px) {
+    padding: 2rem 4rem 4rem 32rem;
+  }
+
+  @media (max-width: 1279px) {
+    padding: 2rem 2rem 4rem 4rem;
+  }
+
+  @media (max-width: 1279px) {
+    padding: 1.5rem;
+  }
+
+  &_inner {
+    &.glassmorphism {
+      & {
+        position: relative;
+        cursor: not-allowed;
+        padding: 2rem;
+        min-height: calc(100vh - 10rem);
+        overflow: visible; // Changed to visible to allow CommonHeading to be above blur
+
+        * {
+          -webkit-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          pointer-events: none;
+        }
+        .commonHeading {
+          pointer-events: auto;
+          position: relative;
+          z-index: 99;
+          filter: none !important;
+          backdrop-filter: none !important;
+          -webkit-backdrop-filter: none !important;
+          isolation: isolate; // Create new stacking context
+
+          h4 {
+            pointer-events: auto;
+            filter: none !important;
+          }
+
+          button,
+          .common_btn {
+            pointer-events: auto;
+            cursor: pointer;
+            position: relative;
+            z-index: 1002;
+            filter: none !important;
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+          }
+        }
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        height: 100% ;
+        width: 100%;
+        backdrop-filter: blur(1.5rem);
+        -webkit-backdrop-filter: blur(1.5rem);
+        background: rgba(20, 20, 20, 0.5);
+        border-radius: 2rem;
+        z-index: 999;
+        pointer-events: auto;
+      }
+    }
+  }
+}

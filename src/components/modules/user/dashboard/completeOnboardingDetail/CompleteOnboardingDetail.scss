@@ -1,0 +1,31 @@
+@use '../../../../../assets/theme/_var.scss' as *;
+
+.userdetail_kyc {
+  .row {
+    &:not([class*='g-']):not([class*='gx-']):not([class*='gy']) {
+      margin: 0 -1.2rem;
+
+      @media (max-width: 991px) {
+        margin: 0 -0.6rem;
+      }
+
+      > div {
+        padding: 0 1.2rem;
+
+        @media (max-width: 991px) {
+          padding: 0 0.6rem;
+        }
+      }
+    }
+  }
+
+  .main_heading {
+    margin-bottom: 3.2rem;
+  }
+
+  .detail_btns {
+    .common_btn {
+      font-size: 1.6rem;
+    }
+  }
+}

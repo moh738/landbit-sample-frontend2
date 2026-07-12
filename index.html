@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="description" content="Invest Small Grow Big" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Landbitt" />
+    <meta property="og:description" content="Invest Small Grow Big" />
+    <meta property="og:image" content="https://user.landbitt.com/web-app-manifest-512x512.png" />
+    <meta property="og:image:secure_url" content="https://user.landbitt.com/web-app-manifest-512x512.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image:alt" content="Landbitt Logo" />
+    <meta property="og:url" content="https://user.landbitt.com" />
+    <meta property="og:site_name" content="Landbitt" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_lanrge_image" />
+    <meta name="twitter:title" content="Landbitt" />
+    <meta name="twitter:description" content="Invest Small Grow Big" />
+    <meta name="twitter:image" content="https://user.landbitt.com/web-app-manifest-512x512.png" />
+    <meta name="twitter:image:alt" content="Landbitt Logo" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,  user-scalable=0, shrink-to-fit=no"
+    />
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Landbitt" />
+    <link rel="manifest" href="/manifest.json" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Landbitt : Invest Small Grow Big</title>
+    <script>
+      // Update meta tags dynamically based on current origin (for runtime updates)
+      (function() {
+        const origin = window.location.origin;
+        const ogImage = origin + '/web-app-manifest-512x512.png';
+        
+        // Update or create og:image
+        let ogImageMeta = document.querySelector('meta[property="og:image"]');
+        if (!ogImageMeta) {
+          ogImageMeta = document.createElement('meta');
+          ogImageMeta.setAttribute('property', 'og:image');
+          document.head.appendChild(ogImageMeta);
+        }
+        ogImageMeta.setAttribute('content', ogImage);
+        
+        // Update or create og:image:secure_url
+        let ogImageSecureMeta = document.querySelector('meta[property="og:image:secure_url"]');
+        if (!ogImageSecureMeta) {
+          ogImageSecureMeta = document.createElement('meta');
+          ogImageSecureMeta.setAttribute('property', 'og:image:secure_url');
+          document.head.appendChild(ogImageSecureMeta);
+        }
+        ogImageSecureMeta.setAttribute('content', ogImage);
+        
+        // Update or create og:url
+        let ogUrlMeta = document.querySelector('meta[property="og:url"]');
+        if (!ogUrlMeta) {
+          ogUrlMeta = document.createElement('meta');
+          ogUrlMeta.setAttribute('property', 'og:url');
+          document.head.appendChild(ogUrlMeta);
+        }
+        ogUrlMeta.setAttribute('content', origin);
+        
+        // Update or create twitter:image
+        let twitterImageMeta = document.querySelector('meta[name="twitter:image"]');
+        if (!twitterImageMeta) {
+          twitterImageMeta = document.createElement('meta');
+          twitterImageMeta.setAttribute('name', 'twitter:image');
+          document.head.appendChild(twitterImageMeta);
+        }
+        twitterImageMeta.setAttribute('content', ogImage);
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

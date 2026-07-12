@@ -1,0 +1,78 @@
+@use '../../../../../assets/theme/_var.scss' as *;
+
+.calculatorrange {
+  &:not(:last-child) {
+    margin-bottom: 6.6rem;
+
+    @media (max-width: 1199px) {
+      margin-bottom: 5.6rem;
+    }
+
+    @media (max-width: 1199px) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &_value {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h4 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: $blackDarkClr;
+
+      @media (max-width: 1679px) {
+        font-size: 1.4rem;
+      }
+
+      @media (max-width: 991px) {
+        font-size: 1.4rem;
+      }
+    }
+
+    h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: $blackDarkClr;
+
+      @media (max-width: 1679px) {
+        font-size: 1.8rem;
+      }
+
+      @media (max-width: 1199px) {
+        font-size: 1.6rem;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .single-thumb {
+    background: $white;
+    height: 1rem;
+    margin: 1.6rem 0;
+
+    .range-slider {
+      &__thumb[data-lower] {
+        width: 0;
+        display: none;
+      }
+
+      &__range {
+        border-radius: 1.2rem;
+        background: $barGradient;
+      }
+
+      &__thumb {
+        background:
+          linear-gradient($white, $white) padding-box,
+          linear-gradient(90deg, #31d290 1.86%, #0069ff 101%) border-box;
+        border: 0.5rem solid transparent;
+      }
+    }
+  }
+}

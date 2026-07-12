@@ -1,0 +1,47 @@
+1. User Registration / Signup
+
+Flow:
+
+User selects account type → Individual or Institutional
+
+For Individual → must complete KYC
+
+For Institutional → must complete KYB
+
+Endpoints Used:
+
+POST {BASE_URL}auth/signup
+
+Purpose: Trigger signup and generate OTP for the user.
+
+POST {BASE_URL}auth/verify-otp?context=signup
+
+Purpose: Verify OTP for completing signup process.
+
+2. Fetch User Profile
+
+Flow:
+
+After successful signup + OTP verification, fetch profile details.
+
+Endpoint Used:
+
+GET {BASE_URL}auth/profile
+
+Response Example:
+
+{
+  "profile": {
+    "userId": "string",
+    "accountType": "Individual | Institutional",
+    "fullName": "string",
+    "email": "string",
+    "phoneNo": "string",
+    "roleId": 0,
+    "isVerified": true,
+    "createdAt": "string",
+    "updatedAt": "string",
+    "lastLogin": "string",
+    "loginNotify": true
+  }
+}

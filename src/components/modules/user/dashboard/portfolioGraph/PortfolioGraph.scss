@@ -1,0 +1,141 @@
+@use '../../../../../assets/theme/_var.scss' as *;
+
+.portfolio_graph {
+  background: $cardBg;
+  border: 1px solid rgba($borderclr3, 0.06);
+  backdrop-filter: blur(108.73126983642578px);
+  @extend %boxShadow;
+  padding: 2.4rem;
+  border-radius: 4rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 1679px) {
+    padding: 2rem 1.5rem;
+    border-radius: 2.4rem;
+  }
+
+  &_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+
+    @media (max-width: 479px) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    &_left {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem 3.4rem;
+
+      @media (max-width: 479px) {
+        margin-bottom: 1.5rem;
+      }
+
+      .gaph_value {
+        display: flex;
+        align-items: flex-start;
+
+        span {
+          height: 0.8rem;
+          width: 0.8rem;
+          background-color: $purpleClr;
+          border-radius: 50%;
+          margin-top: 0.6rem;
+          margin-right: 0.6rem;
+
+          &.skyblueclr {
+            background-color: $skyblueClr;
+          }
+        }
+
+        p {
+          font-size: 1.4rem;
+          font-weight: 500;
+          color: rgba($lightBlack, 0.7);
+          margin-bottom: 0.4rem;
+
+          @media (max-width: 575px) {
+            font-size: 1.2rem;
+          }
+        }
+
+        h3 {
+          font-weight: 700;
+          color: $blackDarkClr;
+        }
+      }
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      @media (max-width: 639px) {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+
+      li {
+        margin-left: 1rem;
+
+        @media (max-width: 1679px) {
+          margin-left: 0.5rem;
+        }
+
+        button {
+          background: rgba($lightgrey, 0.03);
+          color: $blackDarkClr;
+          font-size: 1.6rem;
+          padding: 1.2rem 2.2rem 0.9rem;
+          border-radius: 4rem;
+          opacity: 0.5;
+          font-weight: 600;
+
+          @media (max-width: 1679px) {
+            font-size: 1.4rem;
+            padding: 0.9rem 1.6rem 0.7rem;
+          }
+
+          @media (max-width: 575px) {
+            font-size: 1.2rem;
+            padding: 0.6rem 1.2rem 0.4rem;
+          }
+        }
+
+        &.active {
+          button {
+            opacity: 1;
+            background: $btnGradient;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  .upcoming_txt {
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    h6 {
+      font-size: 2.6rem;
+      font-weight: 600;
+      color: $blackDarkClr;
+    }
+  }
+
+  &_handle {
+    margin-top: auto;
+  }
+}

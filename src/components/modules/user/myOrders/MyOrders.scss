@@ -1,0 +1,11 @@
+@use '../../../../assets/theme/_var.scss' as *;
+
+.orders {
+  .common_tabs {
+    &.orders_tabs {
+      .nav-item {
+        max-width: 22rem;
+      }
+    }
+  }
+}

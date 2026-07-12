@@ -1,0 +1,210 @@
+@use '../../../../assets/theme/_var.scss' as *;
+
+.dashboard {
+  &_head {
+    .common_btn {
+      font-size: 1.6rem;
+      padding: 1rem 5.3rem;
+
+      @media (max-width: 991px) {
+        font-size: 1.4rem;
+      }
+
+      @media (max-width: 575px) {
+        padding: 1rem 2rem;
+      }
+    }
+  }
+
+  &_valuecard {
+    .row {
+      &:not([class*='g-']):not([class*='gx-']):not([class*='gy']) {
+        margin: 0 -1.2rem;
+
+        @media (max-width: 767px) {
+          margin: 0 -0.5rem;
+        }
+
+        > div {
+          padding: 0 1.2rem;
+          margin-bottom: 2.5rem;
+
+          @media (max-width: 767px) {
+            padding: 0 0.5rem;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  &_card {
+    background: $cardBg;
+    border: 1px solid rgba($borderclr3, 0.06);
+    backdrop-filter: blur(108.73126983642578px);
+    @extend %boxShadow;
+    padding: 2.4rem;
+    border-radius: 2.4rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    @media (max-width: 1679px) {
+      padding: 2rem 1.5rem;
+    }
+
+    &_icon {
+      height: 5.6rem;
+      width: 5.6rem;
+      border-radius: 50%;
+      background-color: rgba($orangeClr, 0.1);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media (max-width: 1679px) {
+        height: 4.6rem;
+        width: 4.6rem;
+      }
+
+      &.lightblueclr {
+        background-color: rgba($lightblueClr, 0.1);
+      }
+      &.lightpurpleclr {
+        background-color: rgba($lightpurpleClr, 0.1);
+      }
+      &.lightgreenclr {
+        background-color: rgba($lightgreenClr, 0.1);
+
+        span {
+          svg {
+            @media (max-width: 575px) {
+              height: 1.8rem;
+              width: 1.8rem;
+            }
+          }
+        }
+      }
+
+      span {
+        svg {
+          @media (max-width: 575px) {
+            height: 2.8rem;
+            width: 2.8rem;
+          }
+        }
+      }
+    }
+
+    &_content {
+      padding-left: 2.1rem;
+
+      h3 {
+        font-size: 3rem;
+        font-weight: 700;
+        word-break: break-word;
+        color: $blackDarkClr;
+
+        @media (max-width: 1679px) {
+          font-size: 2.6rem;
+        }
+
+        @media (max-width: 1440px) {
+          font-size: 2.2rem;
+        }
+
+        @media (max-width: 575px) {
+          font-size: 2rem;
+        }
+      }
+
+      p {
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: rgba($lightBlack, 0.7);
+        margin-bottom: 0.4rem;
+
+        @media (max-width: 575px) {
+          font-size: 1.2rem;
+          margin-bottom: 0.2rem;
+        }
+      }
+    }
+  }
+
+  &_middle_row {
+    margin: 0 -1.35rem;
+
+    @media (max-width: 767px) {
+      margin: 0 -0.5rem;
+    }
+
+    > div {
+      padding: 0 1.35rem;
+      margin-bottom: 3rem;
+
+      @media (max-width: 767px) {
+        padding: 0 0.5rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  &_investments {
+    &_row {
+      &.row {
+        &:not([class*='g-']):not([class*='gx-']):not([class*='gy']) {
+          margin: 0 -1rem;
+
+          @media (max-width: 767px) {
+            margin: 0 -0.5rem;
+          }
+
+          > div {
+            padding: 0 1rem;
+            margin-bottom: 2rem;
+
+            @media (max-width: 767px) {
+              padding: 0 0.5rem;
+              margin-bottom: 1rem;
+            }
+          }
+        }
+      }
+    }
+
+    &_heading {
+      margin-bottom: 1.8rem;
+      font-weight: 600;
+      color: $blackDarkClr;
+    }
+
+    .tab_content {
+      .no_data_found {
+        text-align: center;
+        padding: 2rem;
+
+        svg {
+          margin-bottom: 2rem;
+          width: 6rem;
+          height: 6rem;
+        }
+
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .common_tabs {
+    &.markets_tabs {
+      .nav-item {
+        max-width: 22rem;
+      }
+    }
+  }
+}
